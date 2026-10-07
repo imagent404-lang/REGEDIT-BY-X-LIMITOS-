@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#030405">
+<meta name="description" content="X LIMITOS — premium liquid-glass portal.">
+<link rel="icon" href="assets/x-limitos-logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<title>X LIMITOS — Private Access</title>
+</head>
+<body data-page="home">
+<div class="video-bg" aria-hidden="true">
+  <!-- Supplied background video asset -->
+  <video id="animeVideo" autoplay muted loop playsinline preload="metadata" poster="assets/x-limitos-logo.jpg">
+    <source src="assets/video/anime-background.mp4" type="video/mp4">
+  </video>
+  <div class="video-vignette"></div>
+  <div class="video-grid"></div>
+</div>
+<div class="ambient"></div><div id="toast" class="toast"></div>
+<header class="topbar glass">
+  <a class="brand" href="index.html">
+    <img src="assets/x-limitos-logo.jpg" class="brand-logo" alt="X LIMITOS logo">
+    <span><b>X LIMITOS</b><small>PRIVATE NETWORK</small></span>
+  </a>
+  <nav class="nav"><a href="index.html" class="active">Home</a><a href="panel.html">Systems</a><button id="authButton" class="nav-btn">Admin Login</button></nav>
+</header>
+<main class="hero-wrap">
+  <section class="hero glass">
+    <div class="hero-orb hero-orb-a"></div><div class="hero-orb hero-orb-b"></div>
+    <div class="eyebrow"><span class="pulse"></span> INVITE-ONLY DIGITAL COMMUNITY</div>
+    <div class="hero-logo-frame"><img src="assets/x-limitos-logo.jpg" alt="X LIMITOS" class="hero-logo"></div>
+    <h1><span>X</span> LIMITOS</h1>
+    <p class="hero-copy">A cinematic private portal built around your panels, resources, community links and video guides — with a premium liquid-glass 3D interface.</p>
+    <button id="joinPanel" class="hero-cta">
+      <span class="cta-icon">✦</span>
+      <span><b>JOIN FOR PANEL</b><small>ENTER THE X LIMITOS SYSTEMS</small></span>
+      <span class="arrow">↗</span>
+    </button>
+    <div class="social-row">
+      <a id="discordBtn" class="social discord" href="#" target="_blank" rel="noopener"><span class="social-logo">◖</span><span>Discord</span><small>Community</small></a>
+      <a id="youtubeBtn" class="social youtube" href="#" target="_blank" rel="noopener"><span class="social-logo">▶</span><span>YouTube</span><small>Official videos</small></a>
+    </div>
+    <div class="stats"><div><strong>06</strong><span>SYSTEMS</span></div><div><strong>24/7</strong><span>ACCESS</span></div><div><strong>3D</strong><span>LIQUID UI</span></div></div>
+  </section>
+  <section class="feature-strip">
+    <div class="feature glass"><span>◎</span><b>Ultra Liquid Glass</b><small>Depth, refraction and layered highlights</small></div>
+    <div class="feature glass"><span>ϟ</span><b>Video Ready</b><small>Use your own copyright-safe anime background</small></div>
+    <div class="feature glass"><span>⌁</span><b>Admin Managed</b><small>Central links and per-system YouTube guides</small></div>
+  </section>
+</main>
+<div id="adminModal" class="modal"><div class="modal-card glass">
+  <button class="modal-close" data-close>×</button><div class="modal-logo"><img src="assets/x-limitos-logo.jpg" alt="X LIMITOS"></div>
+  <div class="eyebrow">ADMIN CONTROL</div><h2>Administrator</h2>
+  <input id="adminUser" class="field" placeholder="Username" autocomplete="username">
+  <input id="adminPass" class="field" placeholder="Password" type="password" autocomplete="current-password">
+  <button id="adminSubmit" class="login-admin">Enter Admin Panel</button>
+  <p class="tiny">Demo: admin / admin</p>
+</div></div>
+<script src="assets/config.js"></script><script type="module" src="assets/app.js"></script>
+</body>
+</html>

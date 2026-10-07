@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#030405">
+<link rel="icon" href="assets/x-limitos-logo.jpg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/styles.css"><title>X LIMITOS — Admin Control</title>
+</head>
+<body data-page="admin">
+<div class="video-bg" aria-hidden="true"><video autoplay muted loop playsinline preload="metadata" poster="assets/x-limitos-logo.jpg"><source src="assets/video/anime-background.mp4" type="video/mp4"></video><div class="video-vignette"></div><div class="video-grid"></div></div><div class="ambient"></div><div id="toast" class="toast"></div>
+<header class="topbar glass"><a class="brand" href="index.html"><img src="assets/x-limitos-logo.jpg" class="brand-logo" alt="X LIMITOS logo"><span><b>X LIMITOS</b><small>ADMIN CONTROL</small></span></a><nav class="nav"><a href="index.html">Home</a><a href="panel.html">Systems</a><button id="logoutBtn" class="nav-btn">Logout</button></nav></header>
+<main class="page">
+  <div class="page-head"><div><div class="eyebrow"><span class="pulse"></span> ADMIN CONTROL CENTER</div><h1>Manage <span>6 pages</span></h1><p>Edit the six resource pages only. Home is intentionally locked. Add YouTube guides, resource links, instructions and a downloadable file for each page.</p></div></div>
+  <section class="admin-grid">
+    <div class="admin-card glass">
+      <div class="admin-heading"><div><span class="eyebrow">PAGE EDITOR</span><h2>System content</h2></div><span class="admin-chip">6 PAGES</span></div>
+      <label>System page</label><select id="systemSelect" class="field"></select>
+      <label>Page description</label><input id="subtitleInput" class="field" placeholder="Short description">
+      <label>YouTube video URL</label><input id="videoInput" class="field" placeholder="https://www.youtube.com/watch?v=..." inputmode="url">
+      <label>Resource / button URL</label><input id="resourceInput" class="field" placeholder="https://example.com/resource" inputmode="url">
+      <label>Instructions</label><textarea id="noteInput" class="field" rows="5" placeholder="Instructions shown on this resource page"></textarea>
+      <label>Upload file for this page</label><input id="fileInput" class="field" type="file">
+      <small id="currentFile" class="file-status">No uploaded file for this page.</small>
+      <div class="resource-row"><button id="saveSystem" class="save-btn">Save page</button><button id="removeFile" class="resource-btn secondary" type="button">Remove file</button></div>
+      <p class="tiny">Uploads are stored in this browser using IndexedDB. With a static GitHub site and no backend, they are not automatically synchronized to other visitors.</p>
+    </div>
+    <div class="admin-card glass">
+      <div class="admin-heading"><div><span class="eyebrow">PUBLISHING RULES</span><h2>Admin-only editing</h2></div><span class="admin-chip">LOCKED</span></div>
+      <div class="access-grid">
+        <div class="access-card"><span class="mini-icon">▶</span><div><b>YouTube guides</b><p>Only the logged-in admin can add or replace a guide URL.</p></div></div>
+        <div class="access-card"><span class="mini-icon">↥</span><div><b>Page files</b><p>Only the admin editor exposes the upload control.</p></div></div>
+        <div class="access-card"><span class="mini-icon">⌂</span><div><b>Home locked</b><p>The home page layout and background video are not editable here.</p></div></div>
+        <div class="access-card"><span class="mini-icon">✓</span><div><b>No Firebase</b><p>No Google sign-in, Firebase, API tokens or external database.</p></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="admin-card glass"><div class="admin-heading"><div><span class="eyebrow">LIVE OVERVIEW</span><h2>Six resource pages</h2></div></div><div id="adminSystemList" class="admin-list"></div></section>
+</main>
+<div id="adminModal" class="modal"><div class="modal-card glass"><button class="modal-close" data-close>×</button><div class="modal-logo"><img src="assets/x-limitos-logo.jpg" alt="X LIMITOS"></div><div class="eyebrow">ADMIN CONTROL</div><h2>Administrator</h2><input id="adminUser" class="field" placeholder="Username" autocomplete="username"><input id="adminPass" class="field" placeholder="Password" type="password" autocomplete="current-password"><button id="adminSubmit" class="login-admin">Enter Admin Panel</button><p class="tiny">Local admin access • no Google login • no Firebase.</p></div></div>
+<script src="assets/config.js"></script><script type="module" src="assets/app.js"></script>
+</body></html>
